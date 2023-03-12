@@ -1,5 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include "tegas.h"
 #include "ex2.test.c"
 
 int main(void)

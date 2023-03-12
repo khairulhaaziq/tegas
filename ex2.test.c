@@ -1,5 +1,5 @@
-#include "add.c"
 #include "tegas.h"
+#include "add.c"
 
 int	test(void)
 {

@@ -1,13 +1,5 @@
 #include <stdio.h>
 
-void	int_expected_to_be(int16_t expected, int16_t actual)
-{
-	if (expected == actual)
-		printf("Success");
-	else
-		printf("Failed");
-}
-
 int	assert(int expected, int output)
 {
 	if (expected != output)
