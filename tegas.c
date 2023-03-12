@@ -1,6 +1,8 @@
 #include <stdio.h>
+#include <string.h>
 
-int	assert(int expected, int output)
+//units
+static int	assert_eq_int(int expected, int output)
 {
 	if (expected != output)
 	{
@@ -11,7 +13,20 @@ int	assert(int expected, int output)
 	return (0);
 }
 
-int	run_tests(char *message, int tests[], int length)
+static int	assert_eq_str(char *expected, char *output)
+{
+	if (strcmp(expected, output))
+	{
+		printf("Expected %s, output %s. FAIL\n", expected, output);
+		return (1);
+	};
+	printf("Expected %s, output %s. PASS\n", expected, output);
+	return (0);
+}
+
+
+//runner
+static int	run_tests(char *message, int tests[], int length)
 {
 	int i = 0;
 	int error = 0;
